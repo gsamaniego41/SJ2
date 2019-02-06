@@ -2,7 +2,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 55px 70px;
+  padding: 40px 70px;
 
   .logo {
     font-family: @sub-heading;
@@ -12,7 +12,7 @@ header {
   }
 
   .burger {
-    width: 50px;
+    width: 45px;
     cursor: pointer;
     display: flex;
     align-items: flex-end;
@@ -23,6 +23,7 @@ header {
       height: 2px;
       background: @primary-color;
       margin-bottom: 8px;
+      transition: all 0.3s;
 
       &:nth-of-type(2) {
         width: 85%;
@@ -30,6 +31,10 @@ header {
 
       &:nth-of-type(3) {
         width: 70%;
+      }
+
+      &:hover {
+        width: 100%;
       }
     }
   }

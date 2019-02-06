@@ -139,7 +139,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 55px 70px;
+  padding: 40px 70px;
 }
 header .logo {
   font-family: "Cormorant Garamond", serif;
@@ -148,7 +148,7 @@ header .logo {
   color: #97a1ac;
 }
 header .burger {
-  width: 50px;
+  width: 45px;
   cursor: pointer;
   display: flex;
   align-items: flex-end;
@@ -159,6 +159,7 @@ header .burger .line {
   height: 2px;
   background: #97a1ac;
   margin-bottom: 8px;
+  transition: all 0.3s;
 }
 header .burger .line:nth-of-type(2) {
   width: 85%;
@@ -166,13 +167,16 @@ header .burger .line:nth-of-type(2) {
 header .burger .line:nth-of-type(3) {
   width: 70%;
 }
+header .burger .line:hover {
+  width: 100%;
+}
 #home {
   min-height: 100%;
   z-index: 1;
 }
 #home .welcome {
   position: absolute;
-  left: 10%;
+  left: 15%;
   width: 20%;
 }
 #home .welcome h4 {
@@ -199,9 +203,9 @@ header .burger .line:nth-of-type(3) {
   font-family: "Cormorant Garamond", serif;
   color: #686963;
   position: absolute;
-  font-size: 15vw;
-  bottom: 50px;
-  transform: translateX(12.5%);
+  font-size: 12vw;
+  top: 52vh;
+  transform: translateX(27%);
   line-height: 0.8;
   z-index: 3;
 }
@@ -209,9 +213,15 @@ header .burger .line:nth-of-type(3) {
   height: 500px;
   width: 750px;
   position: absolute;
-  right: 10%;
+  right: 14%;
   z-index: 2;
   overflow: hidden;
+}
+@media (min-width: 1500px) {
+  #home .home-img-container {
+    height: 400px;
+    width: 650px;
+  }
 }
 #home .home-img-container .slant-border-left {
   transform-origin: 0px 0px 0px;
@@ -221,7 +231,7 @@ header .burger .line:nth-of-type(3) {
   height: 50%;
   width: 150px;
   bottom: -40px;
-  left: -250px;
+  left: -220px;
   z-index: 2;
 }
 #home .home-img-container .slant-border-right {
@@ -243,10 +253,10 @@ header .burger .line:nth-of-type(3) {
   transition: all 0.8s;
 }
 #home .home-img-container .home-img:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 #home .home-img-container .home-img:focus {
-  transform: scale(1.07);
+  transform: scale(1.03);
 }
 #home .home-img-container::after {
   content: "";
