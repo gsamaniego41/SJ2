@@ -137,7 +137,33 @@ h1 {
   font-family: "Cormorant Garamond", serif;
   color: #686963;
 }
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 55px 70px;
+}
 header .logo {
   font-family: "Cormorant Garamond", serif;
   font-size: 2.4rem;
+  cursor: pointer;
+}
+header .burger {
+  width: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+header .burger .line {
+  width: 100%;
+  height: 2px;
+  background: #97a1ac;
+  margin-bottom: 8px;
+}
+header .burger .line:nth-of-type(2) {
+  width: 85%;
+}
+header .burger .line:nth-of-type(3) {
+  width: 70%;
 }
