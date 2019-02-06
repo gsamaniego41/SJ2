@@ -265,3 +265,30 @@ header .burger .line:hover {
   display: block;
   background: #97a1ac;
 }
+.featured-container {
+  position: fixed;
+  top: 35vh;
+  left: 40px;
+  color: #b7bcca;
+}
+.featured-container .featured {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.featured-container .featured span {
+  font-size: 1.2em;
+}
+.featured-container .featured-active {
+  color: #686963;
+  font-size: 3.5rem;
+  margin-left: 5px;
+}
+.featured-container .featured-active:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 90%;
+  background: #686963;
+  margin-top: 13px;
+}

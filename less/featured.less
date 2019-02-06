@@ -1,0 +1,32 @@
+.featured-container {
+  position: fixed;
+  top: 35vh;
+  left: 40px;
+  // color: @lt-grey;
+  color: @lt-grey;
+
+  .featured {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    span {
+      font-size: 1.2em;
+    }
+  }
+
+  .featured-active {
+    color: @md-grey;
+    font-size: 3.5rem;
+    margin-left: 5px;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 90%;
+      background: @md-grey;
+      margin-top: 13px;
+    }
+  }
+}
