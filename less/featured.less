@@ -2,16 +2,21 @@
   position: fixed;
   top: 35vh;
   left: 40px;
-  // color: @lt-grey;
   color: @lt-grey;
 
   .featured {
     font-size: 2.5rem;
     margin-bottom: 30px;
     cursor: pointer;
+    transition: all 0.3s;
 
     span {
       font-size: 1.2em;
+    }
+
+    &:hover {
+      margin-left: 3px;
+      color: @primary-color;
     }
   }
 
