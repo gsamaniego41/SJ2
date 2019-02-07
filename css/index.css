@@ -140,6 +140,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 40px 70px;
+  position: fixed;
 }
 header .logo {
   font-family: "Cormorant Garamond", serif;
@@ -175,7 +176,6 @@ header .burger .line:hover {
   width: 100%;
 }
 #home {
-  min-height: 100%;
   z-index: 1;
 }
 #home .welcome {
@@ -318,4 +318,8 @@ header .burger .line:hover {
 }
 .social-icons .fab:hover {
   color: #686963;
+}
+.view {
+  padding-top: 15vh;
+  min-height: 100vh;
 }
