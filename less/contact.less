@@ -1,0 +1,47 @@
+#contact {
+  opacity: 1;
+
+  .card-container {
+    position: absolute;
+    left: 16%;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 700px;
+
+    .card {
+      height: 300px;
+      width: 22.5%;
+      background: #777;
+      margin: 0 5px;
+      box-shadow: 6px 8px 15px 0px #bbb;
+
+      &:nth-last-of-type(1) {
+        background-image: url("../img/contact/gus.jpg");
+        background-position: center;
+        background-size: cover;
+        z-index: 4;
+      }
+
+      &:nth-last-of-type(2) {
+        background-image: url("../img/contact/walt2.jpg");
+        background-position: center;
+        background-size: cover;
+        z-index: 3;
+      }
+
+      &:nth-last-of-type(3) {
+        background-image: url("../img/contact/jesse1.jpg");
+        background-position: center;
+        background-size: cover;
+        z-index: 2;
+      }
+
+      &:nth-last-of-type(4) {
+        background-image: url("../img/contact/saul.jpg");
+        background-position: center;
+        background-size: cover;
+        z-index: 1;
+      }
+    }
+  }
+}
