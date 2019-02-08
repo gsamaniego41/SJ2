@@ -331,37 +331,52 @@ header .burger .line:hover {
   position: absolute;
   left: 16%;
   display: flex;
-  flex-direction: row-reverse;
   width: 700px;
+  height: 500px;
 }
 #contact .card-container .card {
-  height: 300px;
-  width: 22.5%;
-  background: #777;
-  margin: 0 5px;
-  box-shadow: 6px 8px 15px 0px #bbb;
+  height: 450px;
+  width: 40%;
+  cursor: pointer;
+  transition: 0.2s;
+  transform: scale(0.95);
 }
 #contact .card-container .card:nth-last-of-type(1) {
   background-image: url("../img/contact/gus.jpg");
   background-position: center;
   background-size: cover;
+  position: absolute;
+  top: 120px;
   z-index: 4;
 }
 #contact .card-container .card:nth-last-of-type(2) {
   background-image: url("../img/contact/walt2.jpg");
   background-position: center;
   background-size: cover;
+  position: absolute;
+  top: 70px;
+  left: 80px;
   z-index: 3;
 }
 #contact .card-container .card:nth-last-of-type(3) {
   background-image: url("../img/contact/jesse1.jpg");
   background-position: center;
   background-size: cover;
+  position: absolute;
+  top: 20px;
+  left: 170px;
   z-index: 2;
 }
 #contact .card-container .card:nth-last-of-type(4) {
   background-image: url("../img/contact/saul.jpg");
   background-position: center;
   background-size: cover;
+  position: absolute;
+  top: -20px;
+  left: 240px;
   z-index: 1;
+}
+#contact .card-container .card:hover {
+  transform: scaleX(1);
+  z-index: 5;
 }
