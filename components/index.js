@@ -15,16 +15,52 @@ window.addEventListener("load", () => {
 });
 
 class FeaturedNav {
-  constructor(navItem) {
-    this.navItem = navItem;
-    console.log("navItem", navItem);
-    console.log("this.navItem", this.navItem);
+  constructor(navLink) {
+    this.navLink = navLink;
+    // console.log("navLink", navLink);
+    // console.log("this.navLink", this.navLink);
+
+    this.data = this.navLink.dataset.tab;
+    // console.log("this.data", this.data);
+
+    this.item = document.querySelector(`.featured[data-tab="${this.data}"]`);
+    // console.log("this.item:", this.item);
+
+    this.page = new Page(this.item);
+    // console.log("this.page", this.page);
+
+    this.navLink.addEventListener("click", () => this.select());
+  }
+
+  select() {
+    const links = document.querySelectorAll(".featured");
+
+    links.forEach(link => link.classList.remove("featured-active"));
+
+    this.page.select();
   }
 }
 
 class Page {
   constructor(page) {
     this.page = page;
+  }
+
+  select() {
+    const page = document.querySelector(
+      `${
+        this.page.dataset.tab == 1
+          ? "#home"
+          : this.page.dataset.tab == 2
+          ? "#projects"
+          : this.page.dataset.tab == 3
+          ? "#about"
+          : this.page.dataset.tab == 4
+          ? "#contact"
+          : null
+      }`
+    );
+    console.log("selected:", page);
   }
 }
 
