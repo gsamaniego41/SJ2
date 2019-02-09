@@ -230,7 +230,7 @@ header .burger .line:hover {
   color: #686963;
 }
 #home {
-  opacity: 0;
+  opacity: 1;
   z-index: 1;
 }
 #home .welcome {
@@ -325,7 +325,8 @@ header .burger .line:hover {
   background: #97a1ac;
 }
 #contact {
-  opacity: 1;
+  opacity: 0;
+  display: none;
 }
 #contact .card-container {
   position: absolute;
