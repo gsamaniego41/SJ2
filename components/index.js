@@ -21,7 +21,24 @@ class FeaturedNav {
     // console.log("this.navLink", this.navLink);
 
     this.data = this.navLink.dataset.tab;
-    // console.log("this.data", this.data);
+    console.log("this.data", this.data);
+
+    window.addEventListener("wheel", e => {
+      if (e.deltaY > 0) {
+        console.log("scrolling down");
+        console.log(this.data);
+
+        --this.data;
+        this.select();
+      }
+      if (e.deltaY < 0) {
+        console.log("scrolling up");
+        console.log(this.data);
+
+        ++this.data;
+        this.select();
+      }
+    });
 
     this.item = document.querySelector(`.featured[data-tab="${this.data}"]`);
     // console.log("this.item:", this.item);
@@ -30,6 +47,12 @@ class FeaturedNav {
     // console.log("this.page", this.page);
 
     this.navLink.addEventListener("click", () => this.select());
+  }
+
+  scroll() {
+    let index = 0;
+    const links = document.querySelectorAll(".featured");
+    // links.forEach;
   }
 
   select() {
@@ -50,7 +73,7 @@ class Page {
     const pages = document.querySelectorAll(".page");
     pages.forEach(page => page.classList.remove("page-selected"));
     this.page.classList.add("page-selected");
-    console.log(this.page);
+    // console.log(this.page);
 
     /* 
     const page = document.querySelector(
