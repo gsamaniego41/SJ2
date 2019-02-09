@@ -36,7 +36,7 @@ class FeaturedNav {
     const links = document.querySelectorAll(".featured");
 
     links.forEach(link => link.classList.remove("featured-active"));
-
+    this.navLink.classList.add("featured-active");
     this.page.select();
   }
 }
@@ -47,6 +47,12 @@ class Page {
   }
 
   select() {
+    const pages = document.querySelectorAll(".page");
+    pages.forEach(page => page.classList.remove("page-selected"));
+    this.page.classList.add("page-selected");
+    console.log(this.page);
+
+    /* 
     const page = document.querySelector(
       `${
         this.page.dataset.tab == 1
@@ -59,8 +65,9 @@ class Page {
           ? "#contact"
           : null
       }`
-    );
+    ); 
     console.log("selected:", page);
+    */
   }
 }
 
